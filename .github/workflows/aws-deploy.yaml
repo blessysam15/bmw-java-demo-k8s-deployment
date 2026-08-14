@@ -37,7 +37,7 @@ jobs:
             whoami
 
             DEPLOY_DIR="/home/ubuntu/deployment"
-            REPO="https://github.com/JitenPalaparthi/bmw-java-demo-k8s-deployment.git"
+            REPO="https://github.com/blessysam15/bmw-java-demo-k8s-deployment.git"
 
             echo "=========================================="
             echo "Updating deployment repository"
@@ -50,7 +50,7 @@ jobs:
               cd "$DEPLOY_DIR"
 
               git remote set-url origin \
-                "https://JitenPalaparthi:${GH_PAT}@github.com/JitenPalaparthi/bmw-java-demo-k8s-deployment.git"
+                "https://blessysam15:${GH_PAT}@github.com/blessysam15/bmw-java-demo-k8s-deployment.git"
 
               git fetch origin
 
@@ -63,7 +63,7 @@ jobs:
               rm -rf "$DEPLOY_DIR"
 
               git clone \
-                "https://JitenPalaparthi:${GH_PAT}@github.com/JitenPalaparthi/bmw-java-demo-k8s-deployment.git" \
+                "https://blessysam15:${GH_PAT}@github.com/blessysam15/bmw-java-demo-k8s-deployment.git" \
                 "$DEPLOY_DIR"
 
               cd "$DEPLOY_DIR"
